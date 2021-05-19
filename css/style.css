@@ -33,6 +33,7 @@ ul i {
 .timetodolist {
     padding: 20px;
     line-height: 30px;
+    border-radius: 20px;
     background-color: antiquewhite;
 }
 
@@ -51,4 +52,15 @@ ul i {
 .timetodolist {
     margin: 30% 0 0 3% ;
     flex-grow: 3;
+}
+
+input {
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.crossed {
+    text-decoration: line-through;
 }

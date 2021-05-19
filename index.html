@@ -16,8 +16,10 @@
 
             <section class="todolist">
                 <h1>To-Do List</h1>
+                <input type="text" v-model="newTodo" @keydown= "addNewTodo"  placeholder="Please here you can enter your commitments
+                ">
                 <ul>
-                    <li v-for="(todo, index) in TodoList" @click="check"> {{ todo }} <i class="far fa-square"></i> </li>
+                    <li v-for="(todo, index) in todoList" @click="check(index, todo)"> {{ todo.testo }} <i class="far fa-square"></i> </li>
                 </ul>
 
             </section>
@@ -25,15 +27,16 @@
             <section>
 
                 <article class="dolist">
+                    <h2>Do List</h2>
                     <ul>
-                        <li v-for="(todo, index) in TodoList"> {{ todo }} <i class="far fa-check-square"></i> </li>
+                        <li v-for="(does, index) in doList" :class= "(todoList.completed == true) ? 'crossed' : ''" :class="crossed"> {{ does.testo }} <i class="far fa-check-square"></i> </li>
                     </ul>
                 </article>
 
                 <article class="timetodolist">
     
                     <ul>
-                        <li v-for="(todo, index) in TodoList"> {{ todo }} </li>
+                        <li v-for="(todo, index) in todoList"> {{ todo.testo }} </li>
                     </ul>
     
                 </article>
