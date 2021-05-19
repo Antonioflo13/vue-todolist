@@ -16,7 +16,7 @@
 
             <section class="todolist">
                 <h1>To-Do List</h1>
-                <input type="text" v-model="newTodo" @keydown= "addNewTodo"  placeholder="Please here you can enter your commitments
+                <input type="text" v-model="newTodo" @keydown.enter= "addNewTodo"  placeholder="Please here you can enter your commitments
                 ">
                 <ul>
                     <li v-for="(todo, index) in todoList" @click="check(index, todo)"> {{ todo.testo }} <i class="far fa-square"></i> </li>
