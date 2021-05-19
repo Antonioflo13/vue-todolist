@@ -37,8 +37,9 @@ const app = new Vue (
 
             addNewTodo: function (event) {
                 this.todoList.completed = true;
-                if (event.keyCode == 13)
-                this.todoList.push(this.newTodo);
+                if (event.keyCode == 13) {
+                    this.todoList.push({testo:this.newTodo, completed:false});
+                }
             },
         },
     }
